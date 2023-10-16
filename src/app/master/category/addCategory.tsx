@@ -35,7 +35,6 @@ export default function AddCategory() {
     }
 
     setIsMutating(false);
-
     setName('');
     router.refresh();
     setModal(false);
