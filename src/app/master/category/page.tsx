@@ -1,6 +1,7 @@
 import axios from 'axios';
 import AddCategory from './addCategory';
 import DeleteCategory from './deleteCategory';
+import UpdateCategory from './updateCategory';
 
 type category = {
   id: number;
@@ -40,7 +41,8 @@ export default async function CategoryList() {
             <tr key={category.id}>
               <td>{index + 1}</td>
               <td>{category.name}</td>
-              <td>
+              <td className="flex">
+                <UpdateCategory {...category} />
                 <DeleteCategory {...category} />
               </td>
             </tr>
